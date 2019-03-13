@@ -5,10 +5,10 @@
  */
  
 //Change these to the ssid and password of your network
-const char* ssid = "Housing-WiFi";
+const char* ssid = "ssid";
 const char* password = "";
 //Change these to the ssid and password for use in WiFi AP mode
-const char* ssidAP = "ESP8266";
+const char* ssidAP = "ssid";
 const char* passwordAP = "";
 
 void setup() {
@@ -47,4 +47,5 @@ void initAP(){
   WiFi.mode(WIFI_AP);
   WiFi.softAP(ssid, password);
   server.begin();
+  Serial.println(WiFi.softAPIP());
 }
